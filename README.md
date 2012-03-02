@@ -60,7 +60,7 @@ $.clearCookie(name);
 Contributing
 ------------
 
-ezCookie is written in [coffeescript](http://coffeescript.org/#installation, 
+ezCookie is written in [coffeescript](http://coffeescript.org/#installation), 
 and uses [cake](https://github.com/jashkenas/coffee-script/wiki/%5BHowTo%5D-Compiling-and-Setting-Up-Build-Tools) 
 to concatenate the source coffee files together into a single javascript file.
 
