@@ -1,3 +1,0 @@
-ezCookie is a light weight jQuery plugin for storing cookies. It makes use of "subcookies" to store key/value pairs into a single cookie, and also supports storing JSON data, detected automatically.
-
-For full details and examples, please see the project home page at: http://code.google.com/p/ezcookie/
