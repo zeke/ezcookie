@@ -8,51 +8,46 @@ storing JSON data.
 Installation
 ------------
 
-ezcookie uses [Douglas Crockford's json2.js](https://github.com/douglascrockford/JSON-js)
-to stringify and parse JSON. This dependency is baked into `jquery.ezcookie.js` and `jquery.ezcookie.min.js`.
+ezcookie comes in four flavors:
 
-If your application is already using json2.js elsewhere and you don't want to include it twice, use
-`jquery.ezcookie.no_json.js` or `jquery.ezcookie.no_json.min.js`.
+- `jquery.ezcookie.js`
+- `jquery.ezcookie.min.js`
+- `jquery.ezcookie.no_json.js`
+- `jquery.ezcookie.no_json.min.js`
+
+In most cases, `jquery.ezcookie.min.js` is your best bet, but if your application 
+is already using Douglas Crockford's [json2.js](https://github.com/douglascrockford/JSON-js) 
+and you don't want to include it twice, use one of the smaller `no_json` versions.
 
 Usage
 -----
 
 ```javascript
-//  Sets the value as the cookie.
-//  name - (string) The name of the cookie.
-//  value - (string/object) The value of the cookie.
-//  options - (object) Optional parameters.
+//  Set a cookie's value
+// 'value' can be a string or an object
 $.setCookie(name,value,{options});
 
-// Returns the value of the named cookie. JSON cookies are auto-detected and 
-// returned as objects.
-// name - (string) The name of the cookie.
+// Get a cookie's value.
+// JSON cookies are auto-detected and returned as objects.
 $.getCookie(name);
 
-// Sets a name/value pair (or "sub-cookie") within a cookie.
-// name - (string) The name of the cookie.
-// key - (string) The name of the sub-cookie.
-// value - (string/object) The value of the sub-cookie.
-// options - (object) Optional parameters.
+// Set a name/value pair (or "sub-cookie") within a cookie.
+// 'value' can be a string or an object
 $.setSubCookie(name,key,value,{options});
 
-// Retrieves the value of a given sub-cookie.
-// name - (string) The name of the cookie.
-// subName - (string) The name of the sub-cookie.
+// Get a sub-cookie's value.
+// JSON cookies are auto-detected and returned as objects.
 $.getSubCookie(name,subName);
 
-Removes the key/value pair of the given sub-cookie.
-// name - (string) The name of the cookie.
-// subName - (string) The name of the sub-cookie.
+// Remove the key/value pair of the given sub-cookie.
 $.removeSubCookie(name,subName);
 
-// Sets the given cookie to an empty string and sets it to expire.
-// name - (string) The cookie name.
+// Set the given cookie to an empty string and set it to expire.
 $.removeCookie(name);
 
 // Sets the given cookie to an empty string without expiring it.
-// name - (string) The cookie name.
 $.clearCookie(name);
+```
 
 === Options
 
